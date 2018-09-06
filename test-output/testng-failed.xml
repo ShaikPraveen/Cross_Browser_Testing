@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="browser" value="firefox"/>
+  <test thread-count="5" name="ChromeBrowserTest(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.infofactors.verifyAceTest.AceLoginTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="aceloginTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.infofactors.verifyAceTest.AceLoginTest -->
+    </classes>
+  </test> <!-- ChromeBrowserTest(failed) -->
+  <test thread-count="5" name="IETest(failed)" parallel="tests">
+    <parameter name="browser" value="ie"/>
+    <classes>
+      <class name="com.infofactors.verifyAceTest.AceLoginTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="aceloginTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.infofactors.verifyAceTest.AceLoginTest -->
+    </classes>
+  </test> <!-- IETest(failed) -->
+  <test thread-count="5" name="FirefoxBrowserTest(failed)" parallel="tests">
+    <classes>
+      <class name="com.infofactors.verifyAceTest.AceLoginTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="aceloginTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.infofactors.verifyAceTest.AceLoginTest -->
+    </classes>
+  </test> <!-- FirefoxBrowserTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
